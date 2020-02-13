@@ -1,0 +1,16 @@
+1. Perbedaan single quotes dan double quotes
+pada PHP adalah double quotes memiliki evaluasi nilai (baik variabel/
+escape string lainnya) sedangkan single quotes tidak.
+
+Yang ditampilkan pada script pada soal adalah:
+I'm "not a girl
+I'm a womanThat is Mario\'s cat
+Her name is Maria
+
+2. 
+[a] = $i%3
+[b] = $i%5
+[c] = $desc
+[d] = 'ping';
+[e] = 'pong';
+[f] = 'dum';

@@ -1,0 +1,8 @@
+[a] = "navbar-header"
+[b] = [IF635] Web Programming
+[c] = "active"
+[d] = Sign Up
+[e] = <li>
+[f] = Login
+[g] = <li>
+[h] = </nav>
