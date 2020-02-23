@@ -63,7 +63,7 @@
         $query = "INSERT INTO `data_mhs` VALUES (NULL, '$student_id', '$first_name', '$last_name', '$stud_desc')";
         $result = $conn->query($query);
         if ($result) {
-            echo "Tambah mahasiswa berhasil!";
+            header("Location:tabel_mahasiswa.php");
         } else {
             die("Tambah mahasiswa gagal!");
         }

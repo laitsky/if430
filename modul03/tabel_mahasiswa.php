@@ -51,16 +51,18 @@
         <tbody>
         <?php
         include_once("db_config.php");
+        $i = 1;
         $query = "SELECT * FROM `data_mhs`";
         $result = $conn->query($query);
         while ($row = $result->fetch()) {
             echo "<tr>";
-            echo "<td>" . $row['id'] . "</td>";
+            echo "<td>" . $i . "</td>";
             echo "<td>" . $row['student_id'] . "</td>";
             echo "<td>" . $row['first_name'] . "</td>";
             echo "<td>" . $row['last_name'] . "</td>";
             echo "<td><a href='hapus_mhs.php?id=$row[id] '>Hapus</a> | <a href='edit_mhs.php?id=$row[id]'>Edit</a> </td>";
             echo "</tr>";
+            $i++;
         }
         ?>
         </tbody>
