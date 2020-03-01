@@ -1,0 +1,16 @@
+1.
+a.) Kemudahan untuk mendaur dan menggunakan bagian kode yang sudah ditulis.
+b.) Enkapsulasi kode di dalam class
+c.) Memudahkan unit testing
+d.) Memudahkan pemeliharaan kode yang ditulis.
+
+2.
+a.) Class merupakan blueprint yang digunakan untuk membuat objek, memberikan nilai awal yang penting untuk digunakan nantinya.
+b.) Object merupakan hasil yang dibentuk dari sebuah class
+c.) Inheritance adalah mekanisme yang digunakan untuk menjadi pemanjang dari sebuah class/object yang sudah
+    ada (tetap mempertahankan ciri khas objek/class tersebut), namun ditambah dengan properti atau metode yang diperlukan.
+d.) Constructor adalah fungsi class special yang berfungsi untuk melakukan inisialisasi dari setiap objek yang baru dibuat.
+e.) Destructor merupakan kebalikan dari constructor, menghancurkan class object yang telah dibuat.
+
+3.
+PHP MVC adalah patern desain aplikasi yang memisahkan data aplikasi dan logika (modal) dari hasilnya (view).

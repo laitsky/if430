@@ -1,0 +1,11 @@
+1. SQL Injection adalah teknik memasukkan kode yang berpotensi untuk menghancurkan database yang dimiliki.
+Selain SQL Injection, metode user exploitation lainnya adalah melakukan XSS (Cross Site Scripting).
+XSS memungkinkan pelaku untuk memasukkan script berbahaya (biasanya berupa JavaScript) kedalam input yang
+terdapat pada situs kita.
+2. Untuk menghindari SQL Injection, kita dapat menggunakan PDO untuk melakukan query pada database kita. Selain itu,
+kita dapat menggunakan prepared statements. Dan untuk menghindari XSS, kita dapat menggunakan fungsi khusus yang
+bernama htmlspecialchars() setiap kali saat kita ingin menghasilkan output yang berdasarkan input dari user.
+3. MD5 adalah algoritme yang digunakan untuk membuat 128-bit hash value dari string yang diberikan, biasanya
+digunakan untuk melakukan checksum untuk menverifikasi integritas data untuk mengecek data yang hilang secara
+tidak disengaja.
+4. SHA256, SHA1, AES256
