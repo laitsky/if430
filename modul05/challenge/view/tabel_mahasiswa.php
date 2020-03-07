@@ -3,6 +3,7 @@
 session_start();
 if(!isset($_SESSION['email']))
     header("Location: login_page.php");
+
 ?>
 <html>
 <head>
@@ -52,20 +53,25 @@ if(!isset($_SESSION['email']))
         </thead>
         <tbody>
         <?php
-        include_once("db_config.php");
-        $i = 1;
+        include_once "include/db_config.php";
+        include_once "model/student_model.php";
         $query = "SELECT * FROM `data_mhs`";
         $result = $conn->query($query);
+        $mahasiswa = array();
         while ($row = $result->fetch()) {
-            echo "<tr>";
-            echo "<td>" . $i . "</td>";
-            echo "<td>" . $row['student_id'] . "</td>";
-            echo "<td>" . $row['first_name'] . "</td>";
-            echo "<td>" . $row['last_name'] . "</td>";
-            echo "<td><a href='hapus_mhs.php?id=$row[id] '>Hapus</a> | <a href='edit_mhs.php?id=$row[id]'>Edit</a> </td>";
-            echo "</tr>";
-            $i++;
+            array_push($mahasiswa, new Student($row['id'], $row['student_id'], $row['first_name'], $row['last_name']));
         }
+        foreach ($mahasiswa as $row)
+        {
+            echo "<tr>";
+            echo "<td>".$row->get_id()."</td>";
+            echo "<td>".$row->get_student_id()."</td>";
+            echo "<td>".$row->get_first_name()."</td>";
+            echo "<td>".$row->get_last_name()."</td>";
+            echo "<td><a href='hapus_mhs.php?id=$row->get_id() '>Hapus</a> | <a href='edit_mhs.php?id=$row->get_id()'>Edit</a> </td>";
+            echo "</tr>";
+        }
+
         ?>
         </tbody>
     </table>

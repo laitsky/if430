@@ -59,7 +59,7 @@
         $first_name = $_POST['first_name'];
         $last_name = $_POST['last_name'];
         $stud_desc = $_POST['stud_desc'];
-        include_once("include/db_config.php");
+        include_once "include/db_config.php";
         $query = "INSERT INTO `data_mhs` VALUES (NULL, '$student_id', '$first_name', '$last_name', '$stud_desc')";
         $result = $conn->query($query);
         if ($result) {
