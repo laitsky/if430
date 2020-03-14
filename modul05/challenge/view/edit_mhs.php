@@ -30,8 +30,7 @@
     </header>
 </div>
 <?php
-include_once "include/db_config.php";
-
+include_once "../include/db_config.php";
 $id = $_GET['id'];
 
 

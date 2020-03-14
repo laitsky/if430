@@ -53,8 +53,8 @@ if(!isset($_SESSION['email']))
         </thead>
         <tbody>
         <?php
-        include_once "include/db_config.php";
-        include_once "model/student_model.php";
+        include_once "../include/db_config.php";
+        include_once "../model/student_model.php";
         $query = "SELECT * FROM `data_mhs`";
         $result = $conn->query($query);
         $mahasiswa = array();

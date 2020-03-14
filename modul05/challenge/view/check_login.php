@@ -1,7 +1,7 @@
 <?php
 session_start();
 $error = "Email tidak terdaftar atau password salah, silakan coba lagi";
-include_once "include/db_config.php";
+include_once "../include/db_config.php";
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
 
