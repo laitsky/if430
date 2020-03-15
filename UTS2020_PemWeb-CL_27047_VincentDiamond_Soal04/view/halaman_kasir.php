@@ -52,7 +52,7 @@ setlocale(LC_MONETARY, id_ID);
                     <td class="align-middle text-center"><?php echo $row->get_stock(); ?></td>
                     <td class="align-middle text-center"><?php echo money_format("Rp%i", $row->get_price()) ?></td>
                     <td class="align-middle text-center"><a href="item_details_kasir.php?item_id=<?php echo $row->get_id(); ?>"
-                                                class="btn btn-success" style="color: white;">Lihat</a></td>
+                                                class="btn btn-success" style="color: white;"><i class="las la-eye"></i>Lihat</a></td>
                 </tr>
             <?php } ?>
             </tbody>

@@ -42,7 +42,7 @@ setlocale(LC_MONETARY, id_ID);
     ?>
     <div class="table-responsive">
         <div class="text-right">
-            <a href="tambah_item_view.php" class="btn btn-primary mb-3">Tambah Barang Baru</a>
+            <a href="tambah_item_view.php" class="btn btn-primary mb-3"><i class="las la-plus-circle"></i>Tambah Barang Baru</a>
         </div>
         <table class="table table-hover">
             <thead>
@@ -64,10 +64,10 @@ setlocale(LC_MONETARY, id_ID);
                     <td class="align-middle text-center"><?php echo $row->get_stock(); ?></td>
                     <td class="align-middle text-center"><?php echo money_format("Rp%i", $row->get_price()) ?></td>
                     <td class="align-middle text-center"><a href="item_details_manager.php?item_id=<?php echo $row->get_id(); ?>"
-                                                class="btn btn-success mr-2" style="color: white;">Lihat</a>
+                                                class="btn btn-success mr-2" style="color: white;"><i class="las la-eye"></i>Lihat</a>
                         <button type="button" class="btn btn-danger" data-toggle="modal"
                                 data-target="#deleteItem-<?php echo $row->get_id(); ?>">
-                            Hapus
+                            <i class="las la-ban"></i>Hapus
                         </button>
                         <!-- Delete Modal -->
                         <div class="modal fade" id="deleteItem-<?php echo $row->get_id(); ?>" tabindex="-1"
@@ -106,6 +106,6 @@ unset($_SESSION['error']);
 unset($_SESSION['success']);
 unset($_SESSION['success-add']);
 ?>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>

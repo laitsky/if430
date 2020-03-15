@@ -7,7 +7,7 @@ $highest_id = mysqli_fetch_assoc(sql_query("SELECT MAX(user_id) FROM `user`"));
 $next_id = $highest_id['MAX(user_id)'] + 1;
 if(isset($_POST['register'])) {
     $id = $next_id;
-    $password = sanitize_string($_POST['password']);
+    $password = md5(sanitize_string($_POST['password']));
     $first_name = sanitize_string($_POST['first_name']);
     $last_name = sanitize_string($_POST['last_name']);
     $role = sanitize_string($_POST['role']);

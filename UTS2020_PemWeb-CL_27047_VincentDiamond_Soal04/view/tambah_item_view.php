@@ -32,7 +32,7 @@ $next_id = $highest_id['MAX(item_id)'] + 1;
             <textarea required class="form-control" id="deskripsi_barang" style="resize: none;" rows="3"
                       name="deskripsi_barang"></textarea>
         </div>
-        <button class="btn btn-block btn-success" name="add_item">Tambah Barang!</button>
-        <a href="halaman_manager.php" class="btn btn-block btn-outline-secondary">Kembali</a>
+        <button class="btn btn-block btn-success" name="add_item"><i class="las la-plus"></i>Tambah Barang!</button>
+        <a href="halaman_manager.php" class="btn btn-block btn-outline-secondary"><i class="las la-angle-double-left"></i>Kembali</a>
     </form>
 </div>

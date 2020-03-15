@@ -41,7 +41,7 @@ while ($row = mysqli_fetch_array($user_res)) {
 ?>
 <div class="table-responsive">
     <div class="text-right">
-        <a href="tambah_user_view.php" class="btn btn-primary mb-3">Tambah User Baru</a>
+        <a href="tambah_user_view.php" class="btn btn-primary mb-3"><i class="las la-plus-circle"></i>Tambah User Baru</a>
     </div>
     <table class="table table-hover">
         <thead>
@@ -61,8 +61,8 @@ while ($row = mysqli_fetch_array($user_res)) {
                 <td class="align-middle text-center"><?php echo $row->get_name(); ?></td>
                 <td class="align-middle text-center"><?php echo $row->get_role_name(); ?></td>
                 <td class="align-middle text-center"><a href="user_details.php?user_id=<?php echo $row->get_user_id(); ?>"
-                                                        class="btn btn-success mr-2" style="color: white;">Lihat</a>
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteUser-<?php echo $row->get_user_id(); ?>">Hapus</button>
+                                                        class="btn btn-success mr-2" style="color: white;"><i class="las la-eye"></i>Lihat</a>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteUser-<?php echo $row->get_user_id(); ?>"><i class="las la-user-slash"></i>Hapus</button>
                 </td>
             </tr>
             <!-- Delete User Modal -->
@@ -92,6 +92,6 @@ unset($_SESSION['error']);
 unset($_SESSION['success']);
 unset($_SESSION['success-add']);
 ?>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>

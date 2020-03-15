@@ -21,7 +21,7 @@
                 ?>
             </div>
         </div>
-        <button class="btn btn-primary btn-block mb-3" id="button" name="login_submit">Login</button>
+        <button class="btn btn-primary btn-block mb-3" id="button" name="login_submit"><i class="las la-sign-in-alt"></i>Login</button>
     </form>
 </div>
 <?php

@@ -4,7 +4,8 @@ $id = $_GET['item_id'];
 
 $detail_item_res = mysqli_fetch_assoc(sql_query("SELECT * FROM item WHERE item_id='$id'"));
 ?>
-<div class="container pt-5">
+<div class="container pt-5" style="max-width: 600px;">
+    <h2 class="text-center" style="font-weight: bold;">Detail Item (Customer)</h2>
     <div class="row py-4">
         <div class="col-sm-6">
             <h6>ID Barang:</h6>
@@ -45,5 +46,5 @@ $detail_item_res = mysqli_fetch_assoc(sql_query("SELECT * FROM item WHERE item_i
             <h6><?php echo $detail_item_res['item_desc'] ?></h6>
         </div>
     </div>
-    <a class="btn btn-danger" href="halaman_pembeli.php">Kembali</a>
+    <a class="btn btn-danger" href="halaman_pembeli.php"><i class="las la-angle-double-left"></i>Kembali</a>
 </div>

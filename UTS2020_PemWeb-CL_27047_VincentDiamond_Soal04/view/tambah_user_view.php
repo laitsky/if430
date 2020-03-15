@@ -39,7 +39,7 @@ $next_id = $highest_id['MAX(user_id)'] + 1;
             <label for="alamat">Alamat:</label>
             <textarea required class="form-control" id="alamat" style="resize: none;" rows="3" name="alamat"></textarea>
         </div>
-        <button class="btn btn-block btn-success" name="add_user">Tambah!</button>
-        <a href="halaman_admin.php" class="btn btn-block btn-outline-secondary">Kembali</a>
+        <button class="btn btn-block btn-success" name="add_user"><i class="las la-plus"></i>Tambah!</button>
+        <a href="halaman_admin.php" class="btn btn-block btn-outline-secondary"><i class="las la-angle-double-left"></i>Kembali</a>
     </form>
 </div>

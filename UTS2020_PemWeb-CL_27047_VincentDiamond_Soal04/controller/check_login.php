@@ -5,7 +5,7 @@ require_once "../include/config.php";
 $error = $id = $password = "";
 if (isset($_POST['login_submit'])) {
     $id = sanitize_string($_POST['user_id']);
-    $password = sanitize_string($_POST['password']);
+    $password = md5(sanitize_string($_POST['password']));
     if ($id == "" || $password == "") {
         $error = "Masukkan ID dan atau Password kamu!";
         $_SESSION['error'] = $error;

@@ -3,7 +3,8 @@ require_once "../include/header.php";
 $id = $_GET['user_id'];
 $user_detail_res = mysqli_fetch_assoc(sql_query("SELECT user_id, `password`, first_name, last_name, r.role_id, address, role_name FROM user u INNER JOIN role r WHERE u.role_id = r.role_id AND user_id='$id' "));
 ?>
-<div class="container py-3">
+<div class="container py-3" style="max-width: 600px;">
+    <h2 class="text-center" style="font-weight: bold;">Detail User</h2>
     <form action="../controller/update_user.php" method="post">
         <div class="form-group">
             <label for="id_user">ID:</label>
@@ -37,15 +38,10 @@ $user_detail_res = mysqli_fetch_assoc(sql_query("SELECT user_id, `password`, fir
                       name="alamat"><?php echo $user_detail_res['address']; ?></textarea>
         </div>
         <div class="form-group">
-            <label for="password">Password:</label>
-            <input required type="password" class="form-control" id="password" name="password"
-                   value="<?php echo $user_detail_res['password'] ?>">
-        </div>
-        <div class="form-group">
             <input hidden type="text" class="form-control" name="id_user"
                    value="<?php echo $user_detail_res['user_id'] ?>">
         </div>
-        <button class="btn btn-block btn-primary" name="update_user">Perbarui!</button>
-        <a href="halaman_admin.php" class="btn btn-block btn-outline-secondary">Kembali</a>
+        <button class="btn btn-block btn-primary" name="update_user"><i class="las la-edit"></i>Perbarui!</button>
+        <a href="halaman_admin.php" class="btn btn-block btn-outline-secondary"><i class="las la-angle-double-left"></i>Kembali</a>
     </form>
 </div>

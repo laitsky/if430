@@ -10,7 +10,7 @@ if(isset($_POST['add_user'])) {
     $id = $next_id;
     $nama_depan = sanitize_string($_POST['nama_depan']);
     $nama_belakang = sanitize_string($_POST['nama_belakang']);
-    $password = sanitize_string($_POST['password']);
+    $password = md5(sanitize_string($_POST['password']));
     $role = sanitize_string($_POST['role']);
     $alamat = sanitize_string($_POST['alamat']);
 

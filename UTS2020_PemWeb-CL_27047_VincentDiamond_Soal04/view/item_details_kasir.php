@@ -3,7 +3,8 @@ require_once "../include/header.php";
 $id = $_GET['item_id'];
 $detail_item_res = mysqli_fetch_assoc(sql_query("SELECT * FROM item WHERE item_id='$id'"));
 ?>
-<div class="container">
+<div class="container" style="max-width: 600px;">
+    <h2 class="text-center" style="font-weight: bold;">Detail Item (Cashier)</h2>
     <form action="../controller/update_item_kasir.php" method="post">
         <div class="form-group py-3">
             <label for="nama_barang">Nama Barang:</label>
@@ -30,8 +31,8 @@ $detail_item_res = mysqli_fetch_assoc(sql_query("SELECT * FROM item WHERE item_i
                    value="<?php echo $detail_item_res['item_id']; ?>"
         </div>
         <div class="mt-3">
-            <button class="btn btn-block btn-success" name="update_item">Perbarui</button>
-            <a href="halaman_kasir.php" class="btn btn-block btn-outline-danger">Kembali</a>
+            <button class="btn btn-block btn-success" name="update_item"><i class="las la-edit"></i>Perbarui</button>
+            <a href="halaman_kasir.php" class="btn btn-block btn-outline-danger"><i class="las la-angle-double-left"></i>Kembali</a>
         </div>
     </form>
 </div>

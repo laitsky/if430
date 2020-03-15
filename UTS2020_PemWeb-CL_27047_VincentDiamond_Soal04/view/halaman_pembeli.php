@@ -28,7 +28,7 @@ setlocale(LC_MONETARY, id_ID);
                             </div>
                             <div class="col-sm-6">
                                 <a class="btn btn-primary"
-                                   href="item_details_pembeli.php?item_id=<?php echo $row->get_id(); ?>">Lihat
+                                   href="item_details_pembeli.php?item_id=<?php echo $row->get_id(); ?>"><i class="las la-eye"></i>Lihat
                                     Detail</a>
                             </div>
                         </div>

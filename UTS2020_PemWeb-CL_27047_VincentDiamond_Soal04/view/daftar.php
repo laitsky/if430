@@ -50,8 +50,8 @@ $next_id = $highest_id['MAX(item_id)'] + 1;
                 ?>
             </div>
         </div>
-        <button class="btn btn-primary btn-block mb-3" id="button" name="register">Daftar</button>
-        <a href="../index.php" class="btn btn-block btn-outline-secondary">Kembali</a>
+        <button class="btn btn-primary btn-block mb-3" id="button" name="register"><i class="las la-pen"></i>Daftar</button>
+        <a href="../index.php" class="btn btn-block btn-outline-secondary"><i class="las la-angle-double-left"></i>Kembali</a>
     </form>
 </div>
 <?php
