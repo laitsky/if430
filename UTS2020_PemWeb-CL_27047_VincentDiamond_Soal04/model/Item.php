@@ -46,9 +46,12 @@ class Item
     {
         if ($this->item_stock > 15)
             $status = "Tersedia";
-        else if ($this->item_stock > 5 && $this->item_stock < 15)
+        else if ($this->item_stock >= 5 && $this->item_stock <= 15)
             $status = "Terbatas";
-        else $status = "Hampir habis";
+        else if ($this->item_stock > 0 && $this->item_stock < 5)
+            $status = "Hampir habis";
+        else if ($this->item_stock == 0)
+            $status = "Habis";
         return $status;
     }
 
