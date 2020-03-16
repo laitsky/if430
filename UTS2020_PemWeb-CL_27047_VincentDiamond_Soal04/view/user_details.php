@@ -1,5 +1,7 @@
 <?php
 require_once "../include/header.php";
+if (!isset($_SESSION['user_id']))
+    echo "<meta http-equiv=\"refresh\" content=\"0;URL='../index.php'\" />";
 $id = $_GET['user_id'];
 $user_detail_res = mysqli_fetch_assoc(sql_query("SELECT user_id, `password`, first_name, last_name, r.role_id, address, role_name FROM user u INNER JOIN role r WHERE u.role_id = r.role_id AND user_id='$id' "));
 ?>

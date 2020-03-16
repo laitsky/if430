@@ -1,5 +1,7 @@
 <?php
 require_once "../include/header.php";
+if (!isset($_SESSION['user_id']))
+    echo "<meta http-equiv=\"refresh\" content=\"0;URL='../index.php'\" />";
 $id = $_GET['item_id'];
 $detail_item_res = mysqli_fetch_assoc(sql_query("SELECT * FROM item WHERE item_id='$id'"));
 ?>
@@ -32,7 +34,8 @@ $detail_item_res = mysqli_fetch_assoc(sql_query("SELECT * FROM item WHERE item_i
         </div>
         <div class="mt-3">
             <button class="btn btn-block btn-success" name="update_item"><i class="las la-edit"></i>Perbarui</button>
-            <a href="halaman_kasir.php" class="btn btn-block btn-outline-danger"><i class="las la-angle-double-left"></i>Kembali</a>
+            <a href="halaman_kasir.php" class="btn btn-block btn-outline-danger"><i
+                        class="las la-angle-double-left"></i>Kembali</a>
         </div>
     </form>
 </div>

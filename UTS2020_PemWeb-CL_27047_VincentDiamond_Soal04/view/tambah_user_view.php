@@ -1,5 +1,7 @@
 <?php
 require_once "../include/header.php";
+if (!isset($_SESSION['user_id']))
+    echo "<meta http-equiv=\"refresh\" content=\"0;URL='../index.php'\" />";
 $highest_id = mysqli_fetch_assoc(sql_query("SELECT MAX(user_id) FROM `user`"));
 $next_id = $highest_id['MAX(user_id)'] + 1;
 ?>

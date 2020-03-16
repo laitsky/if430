@@ -5,7 +5,7 @@ $dbuser = "root";
 $dbpass = "";
 
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
-if($conn->connect_error) die("Tidak dapat terhubung dengan database!");
+if ($conn->connect_error) die("Tidak dapat terhubung dengan database!");
 
 
 function sanitize_string($var)

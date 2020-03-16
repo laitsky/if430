@@ -2,9 +2,10 @@
 include_once "../include/header.php";
 include_once "../model/Item.php";
 setlocale(LC_MONETARY, id_ID);
+if (!isset($_SESSION['user_id']))
+    echo "<meta http-equiv=\"refresh\" content=\"0;URL='../index.php'\" />";
 ?>
 <div class="container">
-    <h6>Halo User ID <?php echo $_SESSION['user_id']; ?>, kamu masuk sebagai <span style="font-weight: bold; text-decoration: underline"><?php echo $_SESSION['role_name']; ?></span></h6>
     <h2 class="text-center" style="font-weight: bold">Manager Page UShop</h2>
     <div>
         <?php
@@ -42,10 +43,11 @@ setlocale(LC_MONETARY, id_ID);
     ?>
     <div class="table-responsive">
         <div class="text-right">
-            <a href="tambah_item_view.php" class="btn btn-primary mb-3"><i class="las la-plus-circle"></i>Tambah Barang Baru</a>
+            <a href="tambah_item_view.php" class="btn btn-primary mb-3"><i class="las la-plus-circle"></i>Tambah Barang
+                Baru</a>
         </div>
         <table class="table table-hover">
-            <thead>
+            <thead class="thead-dark">
             <tr>
                 <th scope="col" class="text-center">ID Barang</th>
                 <th scope="col" class="text-center">Nama Barang</th>
@@ -63,8 +65,9 @@ setlocale(LC_MONETARY, id_ID);
                     <td class="align-middle text-center"><?php echo $row->get_name(); ?></td>
                     <td class="align-middle text-center"><?php echo $row->get_stock(); ?></td>
                     <td class="align-middle text-center"><?php echo money_format("Rp%i", $row->get_price()) ?></td>
-                    <td class="align-middle text-center"><a href="item_details_manager.php?item_id=<?php echo $row->get_id(); ?>"
-                                                class="btn btn-success mr-2" style="color: white;"><i class="las la-eye"></i>Lihat</a>
+                    <td class="align-middle text-center"><a
+                                href="item_details_manager.php?item_id=<?php echo $row->get_id(); ?>"
+                                class="btn btn-success mr-2" style="color: white;"><i class="las la-eye"></i>Lihat</a>
                         <button type="button" class="btn btn-danger" data-toggle="modal"
                                 data-target="#deleteItem-<?php echo $row->get_id(); ?>">
                             <i class="las la-ban"></i>Hapus

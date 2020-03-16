@@ -2,9 +2,10 @@
 include_once "../include/header.php";
 include_once "../model/Item.php";
 setlocale(LC_MONETARY, id_ID);
+if (!isset($_SESSION['user_id']))
+    echo "<meta http-equiv=\"refresh\" content=\"0;URL='../index.php'\" />";
 ?>
 <div class="container">
-    <h6>Halo User ID <?php echo $_SESSION['user_id']; ?>, kamu masuk sebagai <span style="font-weight: bold; text-decoration: underline"><?php echo $_SESSION['role_name']; ?></span></h6>
     <h2 class="text-center" style="font-weight: bold">Customer Page UShop</h2>
     <?php
     $item_res = sql_query("SELECT * FROM item");
@@ -28,7 +29,8 @@ setlocale(LC_MONETARY, id_ID);
                             </div>
                             <div class="col-sm-6">
                                 <a class="btn btn-primary"
-                                   href="item_details_pembeli.php?item_id=<?php echo $row->get_id(); ?>"><i class="las la-eye"></i>Lihat
+                                   href="item_details_pembeli.php?item_id=<?php echo $row->get_id(); ?>"><i
+                                            class="las la-eye"></i>Lihat
                                     Detail</a>
                             </div>
                         </div>

@@ -1,7 +1,8 @@
 <?php
 require_once "../include/header.php";
+if (!isset($_SESSION['user_id']))
+    echo "<meta http-equiv=\"refresh\" content=\"0;URL='../index.php'\" />";
 $id = $_GET['item_id'];
-
 $detail_item_res = mysqli_fetch_assoc(sql_query("SELECT * FROM item WHERE item_id='$id'"));
 ?>
 <div class="container pt-5" style="max-width: 600px;">

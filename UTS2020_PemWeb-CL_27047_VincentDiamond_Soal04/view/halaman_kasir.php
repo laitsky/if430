@@ -2,13 +2,14 @@
 include_once "../include/header.php";
 include_once "../model/Item.php";
 setlocale(LC_MONETARY, id_ID);
+if (!isset($_SESSION['user_id']))
+    echo "<meta http-equiv=\"refresh\" content=\"0;URL='../index.php'\" />";
 ?>
 <div class="container">
-    <h6>Halo User ID <?php echo $_SESSION['user_id']; ?>, kamu masuk sebagai <span style="font-weight: bold; text-decoration: underline"><?php echo $_SESSION['role_name']; ?></span></h6>
     <h2 class="text-center" style="font-weight: bold">Cashier Page UShop</h2>
     <div>
         <?php
-        if(isset($_SESSION['error'])) {
+        if (isset($_SESSION['error'])) {
             ?>
             <div class="alert alert-danger" role="alert">
                 Update barang gagal. Stok dan harga barang harus di atas 0!
@@ -17,7 +18,7 @@ setlocale(LC_MONETARY, id_ID);
     </div>
     <div>
         <?php
-        if(isset($_SESSION['success'])) {
+        if (isset($_SESSION['success'])) {
             ?>
             <div class="alert alert-success" role="alert">
                 Update barang berhasil!
@@ -33,7 +34,7 @@ setlocale(LC_MONETARY, id_ID);
     ?>
     <div class="table-responsive">
         <table class="table table-hover">
-            <thead>
+            <thead class="thead-dark">
             <tr>
                 <th scope="col" class="text-center">ID Barang</th>
                 <th scope="col" class="text-center">Nama Barang</th>
@@ -51,8 +52,9 @@ setlocale(LC_MONETARY, id_ID);
                     <td class="align-middle text-center"><?php echo $row->get_name(); ?></td>
                     <td class="align-middle text-center"><?php echo $row->get_stock(); ?></td>
                     <td class="align-middle text-center"><?php echo money_format("Rp%i", $row->get_price()) ?></td>
-                    <td class="align-middle text-center"><a href="item_details_kasir.php?item_id=<?php echo $row->get_id(); ?>"
-                                                class="btn btn-success" style="color: white;"><i class="las la-eye"></i>Lihat</a></td>
+                    <td class="align-middle text-center"><a
+                                href="item_details_kasir.php?item_id=<?php echo $row->get_id(); ?>"
+                                class="btn btn-success" style="color: white;"><i class="las la-eye"></i>Lihat</a></td>
                 </tr>
             <?php } ?>
             </tbody>

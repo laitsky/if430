@@ -18,9 +18,9 @@ if (isset($_POST['login_submit'])) {
             $_SESSION['error'] = $error;
             header("Location: ../index.php");
         } else {
-            $res = mysqli_fetch_assoc(sql_query("SELECT u.role_id, r.role_name FROM user u INNER JOIN role r ON u.role_id = r.role_id WHERE u.user_id = '$id'"));
+            $res = mysqli_fetch_assoc(sql_query("SELECT u.role_id, u.first_name, r.role_name FROM user u INNER JOIN role r ON u.role_id = r.role_id WHERE u.user_id = '$id'"));
             $_SESSION['user_id'] = $id;
-            $_SESSION['password'] = $password;
+            $_SESSION['name'] = $res['first_name'];
             $_SESSION['role_id'] = $res['role_id'];
             $_SESSION['role_name'] = $res['role_name'];
 

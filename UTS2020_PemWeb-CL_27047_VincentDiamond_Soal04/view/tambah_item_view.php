@@ -1,5 +1,7 @@
 <?php
 require_once "../include/header.php";
+if (!isset($_SESSION['user_id']))
+    echo "<meta http-equiv=\"refresh\" content=\"0;URL='../index.php'\" />";
 $highest_id = mysqli_fetch_assoc(sql_query("SELECT MAX(item_id) FROM `item`"));
 $next_id = $highest_id['MAX(item_id)'] + 1;
 ?>
@@ -33,6 +35,7 @@ $next_id = $highest_id['MAX(item_id)'] + 1;
                       name="deskripsi_barang"></textarea>
         </div>
         <button class="btn btn-block btn-success" name="add_item"><i class="las la-plus"></i>Tambah Barang!</button>
-        <a href="halaman_manager.php" class="btn btn-block btn-outline-secondary"><i class="las la-angle-double-left"></i>Kembali</a>
+        <a href="halaman_manager.php" class="btn btn-block btn-outline-secondary"><i
+                    class="las la-angle-double-left"></i>Kembali</a>
     </form>
 </div>

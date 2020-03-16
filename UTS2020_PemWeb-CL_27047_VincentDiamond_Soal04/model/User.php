@@ -36,6 +36,7 @@ class User
     {
         return $this->first_name . " " . $this->last_name;
     }
+
     public function get_role()
     {
         return $this->role_id;
