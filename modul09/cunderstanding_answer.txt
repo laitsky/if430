@@ -1,0 +1,12 @@
+1. 5 URL Helper pada CodeIgniter:
+site_url(): digunakan untuk meng-return nilai site URL sesuai dengan yang ada di file config
+base_url(): sama seperti site_url(), tapi tanpa tambahan indexPage
+current_url(): meng-return nilai lengkap URL (termasuk segmen) yang sedang dilihat
+previous_url(): meng-return nilai URL yang sebelumnya
+uri_string(): meng-return nilai dari path yang sedang dikunjungi
+
+2. buka database.php yang terletak pada application/config/database.php,
+kemudian ganti nilai hostname, username, password, database sesuai dengan sistem yang kita miliki
+
+3. autoload digunakan untuk memungkinkan libraries, helpers, dan models diinisialisasi
+setiap kali web dijalankan.
