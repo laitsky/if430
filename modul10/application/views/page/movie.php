@@ -5,12 +5,12 @@
 	<?php echo $style; ?>
 </head>
 <body>
+	<div class="container">
 	<?php echo $navbar; ?>
 	<br/>
-	<br/>
-	<br/>
-	<br/>
-	<a href="..." style="float:right;margin-right: 15px;">
+	<br>
+	<br>
+	<a href="<?php echo base_url("index.php/MoviePage/AddMovie"); ?>"." style="float:right;margin-right: 15px;">
 		<button class="btn btn-primary"> 
 			<span class="glyphicon glyphicon-plus"></span>
 			Movie
@@ -23,5 +23,6 @@
 
 	<?php echo $footer; ?>
 	<?php echo $script; ?>
+	</div>
 </body>
 </html>

@@ -22,7 +22,7 @@
 					echo "<td>" .$row['Year'] ."</td>";
 					echo "<td>" .$row['Director'] ."</td>";
 					echo "<td>";
-						echo "<a href='".base_url("index.php/MoviePage/ShowDetail?id=$id")."'
+						echo "<a href='".base_url("index.php/MoviePage/ShowDetail/$id")."'
 								style='margin-right:10px;color:rgb(0,200,255);'>";
 							echo "<button class='btn'>";
 								echo "<span class='glyphicon glyphicon-search'></span>";

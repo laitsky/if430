@@ -15,7 +15,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active">
-					<a href="<?php echo base_url("index.php/Product"); ?>"> Movie List
+					<a href="<?php echo base_url("index.php/add_movie"); ?>"> Movie List
 						<span class="sr-only">(current)</span>
 					</a>
 				</li>

@@ -1,0 +1,15 @@
+1. trans_begin() => digunakan untuk menginisialisasi transaksi pada proses basis data
+trans_complete() => digunakan untuk menunjukkan bahwa transaksi sudah selesai dilakukan
+trans_status() => digunakan untuk menunjukkan status/pesan error yang terjadi saat transaksi dilakukan
+trans_rollback() => digunakan untuk melakukan rollback (mengembalikan ke kondisi sebelumnya)
+
+2. Karena kita akan menggunakan model Movies.php di berbagai metode yang ada. Hal tersebut
+dapat meningkatkan efisiensi karena kita tidak perlu melakukan inisialisasi model pada setiap metode.
+Dengan meload Movies.php dalam constructor, semua metode tersebut akan memiliki model Movies.php tersebut.
+
+3.  Mudah digunakan dan memiliki fitur yang lengkap, dan lebih aman daripada fitur validasi form HTML5.
+Selain itu, kita dapat menampilkan error secara keseluruhan maupun secara individual. Juga banyak opsi
+validasi form seperti email, integer, harus berupa desimal maupun angka asli
+
+4. Meningkatkan efisiensi untuk melakukan proses query pada SQL karena fitur query builder 
+CodeIgniter memangkas kode yang harus kita ketik. 

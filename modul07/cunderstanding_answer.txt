@@ -1,0 +1,23 @@
+1. Framework PHP dibagi menjadi 2: Fullstack dan Glue.
+Fullstack framework berkaitan erat satu sama lain sehingga membuat sulit
+untuk mengimplementasikan ide kita sendiri tapi di sisi lain fullstack framework
+membuat pekerjaan kita menjadi lebih mudah. Sedangkan glue framework
+tidak berkaitan erat terhadap komponen satu dengan komponen yang lainnya
+dan menyediakan fleksibilitas yang tinggi. Framework jenis glue memungkinkan
+pengembang tingkat lanjut untuk menggunakan cara mereka dari framework.
+
+Contoh: 
+Symfony, CakePHP, Solar (Fullstack framework)
+CodeIgniter, Zend (Glue framework)
+
+2. 
+WordPress: adalah CMS yang digunakan untuk membuat website atau blog secara mudah.
+Joomla: adalah CMS berbasis sumber terbuka yang digunakan untuk membuat website dan
+aplikasi online.
+SilverStripe: adalah CMS berbasis sumber terbuka yang digunakan untuk mengelola aplikasi website
+CakePHP: adalah CMS dengan lisensi MIT yang digunakan untuk merancang web 
+dengan dukungan validasi input, proteksi CSRF, form tampering protection, SQL 
+injection prevention, dll.
+MODX: adalah CMS untuk yang peduli terhadap user experience yang baik,
+karena MODX memungkinkan pembuat untuk memiliki kontrol yang sangat besar
+terhadap website
