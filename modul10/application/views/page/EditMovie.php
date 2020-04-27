@@ -19,7 +19,7 @@
 			</p>
 		</div>
 	</div>
-	<div class="container" style="margin-top: 35px;">
+	<div class="container" style="margin-top: 35px; padding-bottom: 3em;">
 	<?= form_open_multipart(); ?>
 			<input type="text" name="id" value="<?= $movie_data['MovieID']; ?>" hidden>
 			<div class="form-group">

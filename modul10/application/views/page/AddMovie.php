@@ -21,30 +21,30 @@
 	</div>
 	<div class="container" style="margin-top: 35px;">
 		<?= form_open_multipart(); ?>
-			<div class="form-group">
-				<label for="title">Title</label>
-				<input type="text" class="form-control" id="title" name="title">
-				<small class="form-text text-danger"><?= form_error('title'); ?></small>
-			</div>
-			<div class="form-group">
-				<label for="year">Year</label>
-				<input type="text" class="form-control" id="year" name="year">
-				<small class="form-text text-danger"><?= form_error('year'); ?></small>
-			</div>
-			<div class="form-group">
-				<label for="director">Director</label>
-				<input type="text" class="form-control" id="director" name="director">
-				<small class="form-text text-danger"><?= form_error('director'); ?></small>
+		<div class="form-group">
+			<label for="title">Title</label>
+			<input type="text" class="form-control" id="title" name="title">
+			<small class="form-text text-danger"><?= form_error('title'); ?></small>
+		</div>
+		<div class="form-group">
+			<label for="year">Year</label>
+			<input type="text" class="form-control" id="year" name="year">
+			<small class="form-text text-danger"><?= form_error('year'); ?></small>
+		</div>
+		<div class="form-group">
+			<label for="director">Director</label>
+			<input type="text" class="form-control" id="director" name="director">
+			<small class="form-text text-danger"><?= form_error('director'); ?></small>
 
-			</div>
-			<div class="form-group">
-				<label for="poster" class="custom-file-label">Poster</label>
-				<input type="file" class="custom-file-input" id="poster" name="poster">
-				<small class="form-text text-danger"><?= form_error('poster'); ?></small>
-				<small class="form-text text-danger"><?= $error; ?></small>
-			</div>
-			<button class="btn btn-primary">Add Movie</button>
-			<a href="javascript: history.go(-1)" class="btn btn-danger">Cancel</a>
+		</div>
+		<div class="form-group">
+			<label for="poster" class="custom-file-label">Poster</label>
+			<input type="file" class="custom-file-input" id="poster" name="poster">
+			<small class="form-text text-danger"><?= form_error('poster'); ?></small>
+			<small class="form-text text-danger"><?= $error; ?></small> 
+		</div>
+		<button class="btn btn-primary">Add Movie</button>
+		<a href="javascript: history.go(-1)" class="btn btn-danger">Cancel</a>
 		<?= form_close(); ?>
 	</div>
 	<?php echo $footer; ?>
