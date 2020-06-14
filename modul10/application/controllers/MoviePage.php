@@ -10,6 +10,7 @@ class MoviePage extends CI_Controller
 		$this->load->model('movies');
 	}
 
+
 	public function index()
 	{
 
